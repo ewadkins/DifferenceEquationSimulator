@@ -6,6 +6,12 @@ class differenceEquation:
         self.oldInputs = [0 for i in range(len(inputCoeffs)-1)]
         self.oldOutputs = [0 for i in range(len(outputCoeffs))]
     
+    def stepList(self, inputList):
+        outputs = []
+        for inp in inputList:
+            outputs.append(self.step(inp))
+        return outputs
+    
     def step(self, inp):
         result = 0
         
@@ -39,14 +45,8 @@ class differenceEquation:
         
         return result
         
-dif = differenceEquation([0, 0, 21], [0, -21])
+dif = differenceEquation([0, 1], [1, 1])
 #print "Input Coeffs: %r" % dif.inputCoeffs
 #print "Output Coeffs: %r" % dif.outputCoeffs
-print dif.step(1)
-print dif.step(0)
-print dif.step(0)
-print dif.step(0)
-print dif.step(0)
-print dif.step(0)
-print dif.step(0)
-print dif.step(0)
+print dif.stepList([1, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+
