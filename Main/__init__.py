@@ -44,9 +44,7 @@ class differenceEquation:
             self.oldOutputs = temp
         
         return result
-        
+
 dif = differenceEquation([0, 1], [1, 1])
-#print "Input Coeffs: %r" % dif.inputCoeffs
-#print "Output Coeffs: %r" % dif.outputCoeffs
 print dif.stepList([1, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 
